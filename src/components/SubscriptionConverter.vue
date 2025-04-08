@@ -49,8 +49,8 @@ function copyToClipboard() {
       <div class="card-body">
         <h1 class="card-title text-3xl font-bold text-center text-primary">Clash 订阅转换工具</h1>
 
-        <div class="flex justify-between gap-2 mb-3">
-          <p class="text-base-content/70 mb-3">茂茂自用的 clash 远程配置文件转换工具</p>
+        <div class="flex justify-between items-center gap-2">
+          <p class="text-base-content/70">茂茂自用的 clash 远程配置文件转换工具</p>
           <a href="https://github.com/maomao1996/dotfiles/blob/main/clash/remote/" target="_blank">
             <img
               src="https://img.shields.io/badge/GitHub-181717?logo=Github&logoColor=fff"
@@ -128,7 +128,7 @@ function copyToClipboard() {
           {{ isLoading ? '转换中...' : '生成转换链接' }}
         </button>
 
-        <div v-if="showResult" class="mt-8 animate-fade-in">
+        <div v-if="showResult" class="animate-fade-in">
           <div class="divider"></div>
 
           <h2 class="text-xl font-semibold mb-4 flex items-center">
