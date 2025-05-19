@@ -73,7 +73,7 @@ function copyToClipboard() {
             订阅转换
           </h2>
           <a
-            href="https://xn--clouds-o43k.com/#/register?code=07YceqZM"
+            href="https://xn--cloud-cl5i.net/#/register?code=07YceqZM"
             target="_blank"
             class="btn btn-sm btn-outline btn-secondary gap-1"
           >
