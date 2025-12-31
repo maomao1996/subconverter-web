@@ -45,7 +45,7 @@ function copyToClipboard() {
 
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center bg-base-200 p-4">
-    <div class="card w-full max-w-lg bg-base-100 shadow-xl">
+    <div class="card w-full max-w-2xl bg-base-100 shadow-xl">
       <div class="card-body">
         <h1 class="card-title text-3xl font-bold text-center text-primary">Clash 订阅转换工具</h1>
 
@@ -157,27 +157,26 @@ function copyToClipboard() {
             <label class="label mb-2">
               <span class="label-text font-medium">转换后的链接</span>
             </label>
-            <div class="flex w-full">
-              <input
-                readonly
-                :value="convertedUrl"
-                class="input input-bordered flex-grow rounded-r-none focus:outline-none"
-              />
-              <button @click="copyToClipboard" class="btn btn-primary rounded-l-none gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
-                  <path
-                    d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"
-                  />
-                </svg>
-                复制
-              </button>
-            </div>
+            <textarea
+              readonly
+              rows="5"
+              :value="convertedUrl"
+              class="textarea textarea-bordered w-full focus:outline-none resize-none"
+            ></textarea>
+            <button @click="copyToClipboard" class="btn btn-primary w-full mt-2 gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+                <path
+                  d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"
+                />
+              </svg>
+              复制链接
+            </button>
           </div>
         </div>
       </div>
