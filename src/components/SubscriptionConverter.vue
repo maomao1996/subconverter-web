@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { generateSubscriptionLink } from '@/utils'
 
 const subscriptionUrl = ref('')
@@ -7,6 +7,9 @@ const convertedUrl = ref('')
 const isLoading = ref(false)
 const showResult = ref(false)
 const showCopyToast = ref(false)
+const registerUrl = computed(
+  () => `${import.meta.env.VITE_REGISTER_DOMAIN}/#/register?code=07YceqZM`,
+)
 
 // 监听订阅链接变化，当清空时重置结果
 watch(subscriptionUrl, (newValue: string) => {
@@ -50,8 +53,15 @@ function copyToClipboard() {
         <h1 class="card-title text-3xl font-bold text-center text-primary">Clash 订阅转换工具</h1>
 
         <div class="flex justify-between items-center gap-2">
-          <p class="text-base-content/70">茂茂自用的 clash 远程配置文件转换工具</p>
-          <a href="https://github.com/maomao1996/dotfiles/blob/main/clash/remote/" target="_blank">
+          <p class="text-base-content/70">
+            <a
+              href="https://github.com/maomao1996/dotfiles/blob/main/clash/remote/"
+              target="_blank"
+            >
+              茂茂自用的 Clash 远程配置文件转换工具
+            </a>
+          </p>
+          <a href=" https://github.com/maomao1996/subconverter-web" target="_blank">
             <img
               src="https://img.shields.io/badge/GitHub-181717?logo=Github&logoColor=fff"
               alt="Github"
@@ -72,11 +82,7 @@ function copyToClipboard() {
             <span class="badge badge-primary mr-2">1</span>
             订阅转换
           </h2>
-          <a
-            href="https://xn--cloud-cl5i.net/#/register?code=07YceqZM"
-            target="_blank"
-            class="btn btn-sm btn-outline btn-secondary gap-1"
-          >
+          <a :href="registerUrl" target="_blank" class="btn btn-sm btn-outline btn-secondary gap-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-4 w-4"
