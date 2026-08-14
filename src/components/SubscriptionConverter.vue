@@ -165,7 +165,7 @@ function copyToClipboard() {
             </label>
             <textarea
               readonly
-              rows="5"
+              rows="6"
               :value="convertedUrl"
               class="textarea textarea-bordered w-full focus:outline-none resize-none"
             ></textarea>
